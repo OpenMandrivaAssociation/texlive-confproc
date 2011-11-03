@@ -1,3 +1,9 @@
+# revision 23358
+# category Package
+# catalog-ctan /macros/latex/contrib/conferences/confproc
+# catalog-date 2011-08-02 13:14:53 +0200
+# catalog-license lppl
+# catalog-version 0.8
 Name:		texlive-confproc
 Version:	0.8
 Release:	1
@@ -154,6 +160,7 @@ its time-saving aspects when designing conference proceedings.
 %doc %{_texmfdistdir}/source/latex/confproc/confproc.drv
 %doc %{_texmfdistdir}/source/latex/confproc/confproc.dtx
 %doc %{_texmfdistdir}/source/latex/confproc/confproc.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -164,3 +171,5 @@ its time-saving aspects when designing conference proceedings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
