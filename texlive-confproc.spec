@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The confproc collection comprises a class, a BibTeX style, and
@@ -34,20 +31,12 @@ packages for fine tuning of the table of contents, bibliography
 and index of authors. The added value of the class resides in
 its time-saving aspects when designing conference proceedings.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -161,7 +150,6 @@ its time-saving aspects when designing conference proceedings.
 %doc %{_texmfdistdir}/source/latex/confproc/confproc.drv
 %doc %{_texmfdistdir}/source/latex/confproc/confproc.dtx
 %doc %{_texmfdistdir}/source/latex/confproc/confproc.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -172,5 +160,3 @@ its time-saving aspects when designing conference proceedings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
