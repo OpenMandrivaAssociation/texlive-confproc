@@ -160,3 +160,17 @@ its time-saving aspects when designing conference proceedings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.8-2
++ Revision: 750423
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.8-1
++ Revision: 718119
+- texlive-confproc
+- texlive-confproc
+- texlive-confproc
+- texlive-confproc
+
