@@ -1,12 +1,12 @@
-# revision 23358
+# revision 29349
 # category Package
 # catalog-ctan /macros/latex/contrib/conferences/confproc
-# catalog-date 2011-08-02 13:14:53 +0200
+# catalog-date 2012-06-27 14:08:30 +0200
 # catalog-license lppl
 # catalog-version 0.8
 Name:		texlive-confproc
 Version:	0.8
-Release:	2
+Release:	3
 Summary:	A set of tools for generating conference proceedings
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/conferences/confproc
@@ -160,17 +160,3 @@ its time-saving aspects when designing conference proceedings.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex makeindex tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.8-2
-+ Revision: 750423
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.8-1
-+ Revision: 718119
-- texlive-confproc
-- texlive-confproc
-- texlive-confproc
-- texlive-confproc
-
