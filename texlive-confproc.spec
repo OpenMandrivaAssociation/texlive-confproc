@@ -1,19 +1,13 @@
-# revision 29349
-# category Package
-# catalog-ctan /macros/latex/contrib/conferences/confproc
-# catalog-date 2012-06-27 14:08:30 +0200
-# catalog-license lppl
-# catalog-version 0.8
 Name:		texlive-confproc
-Version:	0.8
-Release:	12
+Version:	29349
+Release:	1
 Summary:	A set of tools for generating conference proceedings
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/conferences/confproc
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,12 +26,12 @@ and index of authors. The added value of the class resides in
 its time-saving aspects when designing conference proceedings.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -153,7 +147,8 @@ its time-saving aspects when designing conference proceedings.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
