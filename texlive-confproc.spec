@@ -1,6 +1,6 @@
 Name:		texlive-confproc
 Version:	29349
-Release:	1
+Release:	2
 Summary:	A set of tools for generating conference proceedings
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/conferences/confproc
