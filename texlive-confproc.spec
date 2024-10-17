@@ -3,7 +3,7 @@ Version:	29349
 Release:	2
 Summary:	A set of tools for generating conference proceedings
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/conferences/confproc
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/conferences/confproc
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/confproc.doc.r%{version}.tar.xz
